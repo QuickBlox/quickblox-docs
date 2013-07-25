@@ -1,0 +1,77 @@
+{
+  "apiVersion": "0.1",
+  "swaggerVersion": "1.1",
+  "resourcePath": "/login.{format}",
+  "basePath": "https://apis.quickblox.com",
+  "apis": [
+    {
+      "path": "/login.{format}",
+      "description": "User operations such as find, sign-in or sign-up",
+      "operations": [
+        {
+          "httpMethod": "POST",
+          "nickname": "login",
+          "summary": "Login a user",
+          "notes": "",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "login",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's login name. You only need to provide either the user's login name or their email address, but you must provide one of them."
+            },
+            {
+              "paramType": "form",
+              "name": "email",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's email address. You only need to provide either the user's login name or their email address, but you must provide one of them."
+            },
+            {
+              "paramType": "form",
+              "name": "password",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's password"
+            },
+            {
+              "paramType": "form",
+              "name": "provider",
+              "dataType": "string",
+              "required": false,
+              "description": "See <a href=\"http://quickblox.com/developers/Social_Networks_Integration_Manual\" target=\"qb-docs\">Social Networks Integration</a>"
+            },
+            {
+              "paramType": "form",
+              "name": "scope",
+              "dataType": "string",
+              "required": false,
+              "description": "List of permisions required by the app to social networking platforms. See <a href=\"https://developers.facebook.com/docs/reference/login/#permissions\" target=\"qb-docs\">Facebook login permissions reference</a>"
+            },
+            {
+              "paramType": "form",
+              "name": "keys[token]",
+              "dataType": "string",
+              "required": false,
+              "description": "Your app's access token for the social network platform"
+            },
+            {
+              "paramType": "form",
+              "name": "keys[secret]",
+              "dataType": "string",
+              "required": false,
+              "description": "Your app's access token secret for the social network platform (currently only required for Twitter integration)"
+            }
+          ]
+        },
+        {
+          "httpMethod": "DELETE",
+          "nickname": "logout",
+          "summary": "Logout a user",
+          "notes": "Calling this api downgrades the token to an <a href=\"http://quickblox.com/developers/Overview#API_Application\">API session</a> token"
+        }
+      ]
+    }
+  ]
+}

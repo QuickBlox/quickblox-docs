@@ -1,0 +1,254 @@
+{
+  "apiVersion": "0.1",
+  "swaggerVersion": "1.1",
+  "resourcePath": "/users",
+  "basePath": "https://apis.quickblox.com",
+  "apis": [
+    {
+      "path": "/users.{format}",
+      "description": "User operations such as find, sign-in or sign-up",
+      "operations": [
+        {
+          "httpMethod": "GET",
+          "nickname": "listUsers",
+          "summary": "Retreive a list of users",
+          "notes": "Call this API to get a list of current users of you app. By default it returns upto 10 users, but you can change this by adding pagination parameters.",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "filter[]",
+              "dataType": "string",
+              "required": false,
+              "description": "You can filter the list of users by supplying a filter string. For example, the following filter limits the results to users who's login is either dgem or webdev:<br/>string login in dgem, webdev<br/><br/>For more information on filtering, see the <a href=\"http://quickblox.com/developers/Users#Filters\" target=\"qb-docs\">filtering documentation</a>"
+            },
+            {
+              "paramType": "form",
+              "name": "per_page",
+              "dataType": "integer",
+              "required": false,
+              "description": "The maximum number of users to return per page, if not specified then the default is 10"
+            },
+            {
+              "paramType": "form",
+              "name": "page",
+              "dataType": "integer",
+              "required": false,
+              "description": "Used to paginate the results when more than one page of users retrieved"
+            }
+          ]
+        },
+        {
+          "httpMethod": "POST",
+          "nickname": "registerUser",
+          "summary": "Registers a new app user",
+          "notes": "Call this API to register a user for the app. You must provide either a user login or email address along with their password, passing both email address and login is permitted but not required",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "user[login]",
+              "dataType": "string",
+              "required": true,
+              "description": "The user's login name, for example johnDoe"
+            },
+            {
+              "paramType": "form",
+              "name": "user[email]",
+              "dataType": "string",
+              "required": true,
+              "description": "The user's email address, for example johnDoe@quickblox.com"
+            },
+            {
+              "paramType": "form",
+              "name": "user[password]",
+              "dataType": "string",
+              "required": true,
+              "description": "The user's password for this app"
+            },
+            {
+              "paramType": "form",
+              "name": "user[blob_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "The id of an assoicated blob for this user, for example their photo"
+            },
+            {
+              "paramType": "form",
+              "name": "user[full_name]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's full name, for example John Doe"
+            },
+            {
+              "paramType": "form",
+              "name": "user[phone]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's telephone number"
+            },
+            {
+              "paramType": "form",
+              "name": "user[website]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's web address, or other url"
+            },
+            {
+              "paramType": "form",
+              "name": "user[tag_list]",
+              "dataType": "string",
+              "required": false,
+              "description": "A comma seperated list of tags associated with the user"
+            },
+            {
+              "paramType": "form",
+              "name": "user[external_user_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "An uid that represents the user in an external user registry"
+            },
+            {
+              "paramType": "form",
+              "name": "user[facebook_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "The user's facebook uid"
+            },
+            {
+              "paramType": "form",
+              "name": "user[twitter_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "The user's twitter uid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/users/{user_id}.{format}",
+      "description": "Retrieve, update or delete an app user",
+      "operations" : [
+        {
+          "httpMethod": "GET",
+          "nickname": "retrieveUser",
+          "summary": "Retrieve a specific user by user id",
+          "parameters":[
+            {
+              "paramType": "path",
+              "name": "user_id",
+              "dataType": "integer",
+              "required": true,
+              "description": "The id of the user to be retrieved"
+            }
+          ]
+        },
+        {
+          "httpMethod": "PUT",
+          "nickname": "updateUser",
+          "summary": "Update a specific user",
+          "parameters": [
+           {
+              "paramType": "form",
+              "name": "user[login]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's login name, for example johnDoe"
+            },
+            {
+              "paramType": "form",
+              "name": "user[email]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's email address, for example johnDoe@quickblox.com"
+            },
+            {
+              "paramType": "form",
+              "name": "user[password]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's new password for this app"
+            },
+            {
+              "paramType": "form",
+              "name": "user[old_password]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's old password for this app"
+            },
+
+            {
+              "paramType": "form",
+              "name": "user[blob_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "The id of an assoicated blob for this user, for example their photo"
+            },
+            {
+              "paramType": "form",
+              "name": "user[full_name]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's full name, for example John Doe"
+            },
+            {
+              "paramType": "form",
+              "name": "user[phone]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's telephone number"
+            },
+            {
+              "paramType": "form",
+              "name": "user[website]",
+              "dataType": "string",
+              "required": false,
+              "description": "The user's web address, or other url"
+            },
+            {
+              "paramType": "form",
+              "name": "user[tag_list]",
+              "dataType": "string",
+              "required": false,
+              "description": "A comma seperated list of tags associated with the user"
+            },
+            {
+              "paramType": "form",
+              "name": "user[external_user_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "An uid that represents the user in an external user registry"
+            },
+            {
+              "paramType": "form",
+              "name": "user[facebook_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "The user's facebook uid"
+            },
+            {
+              "paramType": "form",
+              "name": "user[twitter_id]",
+              "dataType": "integer",
+              "required": false,
+              "description": "The user's twitter uid"
+            }
+          ]
+        },
+        {
+          "httpMethod": "DELETE",
+          "nickname": "deleteUser",
+          "summary": "Remove a user from the app",
+          "parameters":[
+            {
+              "paramType": "path",
+              "name": "user_id",
+              "dataType": "integer",
+              "required": true,
+              "description": "The id of the user to be removed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

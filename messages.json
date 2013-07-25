@@ -1,0 +1,51 @@
+{
+  "apiVersion": "0.1",
+  "swaggerVersion": "1.1",
+  "resourcePath": "/messages.{format}",
+  "basePath": "https://apis.quickblox.com",
+  "apis": [
+    {
+      "path": "/push_tokens.{format}",
+      "description": "Create and delete push tokens",
+      "operations": [
+        {
+          "httpMethod": "POST",
+          "nickname": "create",
+          "summary": "Create push token",
+          "notes": "The type of push token created depends on the device. See <a href=\"http://quickblox.com/developers/Messages#Create_push_token\" target=\"qb-docs\">create token documentation</a>",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "push_token[environment]",
+              "dataType": "pushToken",
+              "required": true,
+              "description": "The app deployment environement for example: dev, test, production etc"
+            },
+            {
+              "paramType": "form",
+              "name": "push_token[client_identification_sequence]",
+              "dataType": "string",
+              "required": true,
+              "description": "Used by 3rd parties to identify the device (? how to find this ?)"
+            },
+            {
+              "paramType" : "form",
+              "name": "device[platform]",
+              "dataType": "string",
+              "required": true,
+              "description": "One of the following: ios, android, windows_phone, blackberry"
+            },
+            {
+              "paramType": "form",
+              "name": "device[udid]",
+              "dataType": "string",
+              "required": "true",
+              "description": "Unique Device identifier of the device sending API requests"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

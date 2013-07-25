@@ -1,0 +1,23 @@
+{
+  "apiVersion": "0.1",
+  "swaggerVersion": "1.1",
+  "basePath": "http://dgem.github.io/swagger-docs",
+  "apis": [
+      {
+        "path": "/session.{format}",
+        "description": "Create and delete API sessions, can also be used to authenticate a user"
+      },
+      {
+        "path": "/login.{format}",
+        "description": "Authenticate, login or logout a user"
+      },
+      {
+        "path": "/users.{format}",
+        "description": "User operations like find or sign-up users. See <a href=\"http://quickblox.com/developers/Users#Users_API\" target=\"qb_docs\">QuickBlox user api</a> documentation"
+      },
+      {
+        "path": "/messages.{format}",
+        "description": ""
+      }
+  ]
+}
