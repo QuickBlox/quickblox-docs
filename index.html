@@ -20,7 +20,7 @@
   <script type="text/javascript">
     $(function () {
       window.swaggerUi = new SwaggerUi({
-      url: "http://dgem.github.io/quickblox-docs/resources.json",
+      url: window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/resources.json",
       dom_id: "swagger-ui-container",
       supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'options'],
       supportHeaderParams: true,

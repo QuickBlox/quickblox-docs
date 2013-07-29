@@ -1,7 +1,6 @@
 {
   "apiVersion": "0.1",
-  "swaggerVersion": "1.1",
-  "basePath": "http://dgem.github.io/quickblox-docs",
+  "swaggerVersion": "1.2",
   "apis": [
       {
         "path": "/session.{format}",
