@@ -1,6 +1,6 @@
 {
   "apiVersion": "0.1",
-  "swaggerVersion": "1.1",
+  "swaggerVersion": "1.2",
   "resourcePath": "/users",
   "basePath": "https://apis.quickblox.com",
   "apis": [
