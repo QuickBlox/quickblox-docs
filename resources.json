@@ -1,10 +1,12 @@
 {
   "apiVersion": "0.1",
   "swaggerVersion": "1.2",
+  "basePath": "http://dgem.github.io/quickblox-docs",
   "apis": [
       {
         "path": "/session.{format}",
-        "description": "Create and delete API sessions, can also be used to authenticate a user"
+        "description": "Create and delete API sessions, can also be used to authenticate a user",
+        "info": "A new info field"
       },
       {
         "path": "/login.{format}",
