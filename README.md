@@ -7,4 +7,3 @@ video chat, content management and integration with popular social networking si
 
 This repository contains a [swagger](https://developers.helloreverb.com/swagger/) based console and documentation of
 of the Web APIs.
-
