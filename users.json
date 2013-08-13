@@ -148,6 +148,13 @@
           "summary": "Update a specific user",
           "parameters": [
            {
+              "paramType": "path",
+              "name": "user_id",
+              "dataType": "integer",
+              "required": true,
+              "description": "The id of the user to be updated"
+           },
+           {
               "paramType": "form",
               "name": "user[login]",
               "dataType": "string",
