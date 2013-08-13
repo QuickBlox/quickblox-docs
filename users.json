@@ -3,6 +3,7 @@
   "swaggerVersion": "1.2",
   "resourcePath": "/users",
   "basePath": "https://apis.quickblox.com",
+  "format": "json",
   "apis": [
     {
       "path": "/users.{format}",
@@ -147,6 +148,13 @@
           "nickname": "updateUser",
           "summary": "Update a specific user",
           "parameters": [
+           {
+              "paramType": "path",
+              "name": "user_id",
+              "dataType": "integer",
+              "required": true,
+              "description": "The id of the user to be updated"
+           },
            {
               "paramType": "form",
               "name": "user[login]",
