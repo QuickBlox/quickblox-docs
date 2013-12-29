@@ -1,24 +1,43 @@
 {
   "apiVersion": "0.1",
   "swaggerVersion": "1.2",
-  "basePath": "http://dgem.github.io/quickblox-docs",
+  "basePath": "http://quickblox.github.io/quickblox-docs",
+  "format" : "json",
   "apis": [
       {
-        "path": "/session.{format}",
-        "description": "Create and delete API sessions, can also be used to authenticate a user",
-        "info": "A new info field"
-      },
-      {
         "path": "/login.{format}",
-        "description": "Authenticate, login or logout a user"
+        "description": "User registraion, login and management services.",
+        "info": "See <a href=\"http://quickblox.com/developers/Users#Users_API\" target=\"qb_docs\">QuickBlox User API</a> and <a href=\"http://quickblox.com/developers/Authentication_and_Authorization#Authentication_and_Authorization_API\" target=\"qb_docs\">QuickBlox Authentication API</a> documentation."
       },
       {
         "path": "/users.{format}",
-        "description": "User operations like find or sign-up users. See <a href=\"http://quickblox.com/developers/Users#Users_API\" target=\"qb_docs\">QuickBlox user api</a> documentation"
+        "description": "User registraion, login and management services.",
+        "info": "See <a href=\"http://quickblox.com/developers/Users#Users_API\" target=\"qb_docs\">QuickBlox User API</a> and <a href=\"http://quickblox.com/developers/Authentication_and_Authorization#Authentication_and_Authorization_API\" target=\"qb_docs\">QuickBlox Authentication API</a> documentation."
       },
       {
-        "path": "/messages.{format}",
-        "description": ""
+        "path": "/location.{format}",
+        "description": "Geolocation and points of interest services.",
+        "info": "See <a href=\"http://quickblox.com/developers/Location#Location_API\" target=\"qb_docs\">QuickBlox Location API</a> documentation"
+      },
+      {
+        "path": "/customObjects.{format}",
+        "description": "A flexible persistance service for app data.",
+        "info": "See <a href=\"http://quickblox.com/developers/Custom_Objects#API_requests\" target=\"qb_docs\">QuickBlox Custom Objects API</a> documentation"
+      },
+      {
+        "path": "/content.{format}",
+        "description": "Streaming content managment service.",
+        "info": "See <a href=\"http://quickblox.com/developers/Content#Content_API\" target=\"qb_docs\">QuickBlox Content API</a> documentation"
+      },
+      {
+        "path": "/messaging.{format}",
+        "description": "Push notification, in-app alerts and email services.",
+        "info": "See <a href=\"http://quickblox.com/developers/Messages#Messages_API\" target=\"qb_docs\">QuickBlox Messaging API</a> documentation"
+      },
+      {
+        "path": "/rating.{format}",
+        "description": "Leaderboards, scoring and ratings services.",
+        "info": "See <a href=\"http://quickblox.com/developers/Ratings#Ratings_API\" target=\"qb_docs\">QuickBlox Rating API</a> documentation"
       }
   ]
 }

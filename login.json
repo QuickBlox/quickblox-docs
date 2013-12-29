@@ -6,62 +6,61 @@
   "apis": [
     {
       "path": "/login.{format}",
-      "description": "User operations such as find, sign-in or sign-up",
       "operations": [
         {
           "httpMethod": "POST",
           "nickname": "login",
           "summary": "Login a user",
-          "notes": "",
+          "notes": "You must provide the user's login id or email address along with a password when authenticating users that are registered in QuickBlox, see <a href=\"http://quickblox.com/developers/Authentication_and_Authorization#API_User_Sign_In\" target=\"qb-docs\">authentication and authorization</a> for more information. See <a href=\"http://quickblox.com/developers/Social_Networks_Integration_Manual\" target=\"qb-docs\">Social Networks integration</a> to learn more using other platforms, like facebook, for authenticating users.",
           "parameters": [
             {
-              "paramType": "form",
-              "name": "login",
-              "dataType": "string",
-              "required": false,
-              "description": "The user's login name. You only need to provide either the user's login name or their email address, but you must provide one of them."
+              "name" : "login",
+              "dataType" : "string",
+              "description": "The user's login, you must provide either the user's login or email.",
+              "required" : false,
+              "paramType" : "form"
             },
             {
-              "paramType": "form",
-              "name": "email",
-              "dataType": "string",
-              "required": false,
-              "description": "The user's email address. You only need to provide either the user's login name or their email address, but you must provide one of them."
+              "name" : "email",
+              "dataType" : "string",
+              "description": "The user's email address, you must provide either the user's login or email.",
+              "required" : false,
+              "paramType" : "form"
             },
             {
-              "paramType": "form",
-              "name": "password",
-              "dataType": "string",
-              "required": false,
-              "description": "The user's password"
+              "name" : "password",
+              "dataType" : "string",
+              "description": "The user's password",
+              "required" : false,
+              "paramType" : "form"
             },
             {
-              "paramType": "form",
-              "name": "provider",
-              "dataType": "string",
-              "required": false,
-              "description": "See <a href=\"http://quickblox.com/developers/Social_Networks_Integration_Manual\" target=\"qb-docs\">Social Networks Integration</a>"
+              "name" : "provider",
+              "dataType" : "string",
+              "description": "Name of the social network provider, eg. facebook, twitter etc.",
+              "required" : false,
+              "paramType" : "form"
             },
             {
-              "paramType": "form",
-              "name": "scope",
-              "dataType": "string",
-              "required": false,
-              "description": "List of permisions required by the app to social networking platforms. See <a href=\"https://developers.facebook.com/docs/reference/login/#permissions\" target=\"qb-docs\">Facebook login permissions reference</a>"
+              "name" : "scope",
+              "dataType" : "string",
+              "description": "List of permisions required by the app to social networking platforms.",
+              "required" : false,
+              "paramType" : "form"
             },
             {
-              "paramType": "form",
-              "name": "keys[token]",
-              "dataType": "string",
-              "required": false,
-              "description": "Your app's access token for the social network platform"
+              "name" : "keys[token]",
+              "dataType" : "string",
+              "description" : "The social network platform's token returned when the user logged in.",
+              "required" : false,
+              "paramType" : "form"
             },
             {
-              "paramType": "form",
-              "name": "keys[secret]",
-              "dataType": "string",
-              "required": false,
-              "description": "Your app's access token secret for the social network platform (currently only required for Twitter integration)"
+              "name" : "keys[secret]",
+              "dataType" : "string",
+              "description": "Your app's access token secret for the social network platform (currently only required for Twitter integration)",
+              "required" : false,
+              "paramType" : "form"
             }
           ]
         },

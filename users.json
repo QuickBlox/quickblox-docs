@@ -3,6 +3,7 @@
   "swaggerVersion": "1.2",
   "resourcePath": "/users",
   "basePath": "https://apis.quickblox.com",
+  "format": "json",
   "apis": [
     {
       "path": "/users.{format}",
